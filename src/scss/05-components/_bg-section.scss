@@ -5,16 +5,22 @@
   display: flex;
   justify-content: center;
   position: relative;
-  font-size: 68px;
+  font-size: 64px;
   line-height: 89.6%;
   margin-bottom: 32px;
-  @media (max-width: 1024px) {
-    font-size: 40px;
-    line-height: 125%;
-    text-align: center;
+  text-align: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  strong {
+    padding-left: 16px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 1160px) {
     flex-direction: column;
+    line-height: 110%;
+  }
+  @media (max-width: 740px) {
+    font-size: 40px;
   }
 }
 .text-secondary {

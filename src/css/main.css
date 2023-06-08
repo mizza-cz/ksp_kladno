@@ -2050,20 +2050,26 @@ table tbody td {
   display: flex;
   justify-content: center;
   position: relative;
-  font-size: 68px;
+  font-size: 64px;
   line-height: 89.6%;
   margin-bottom: 32px;
+  text-align: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media (max-width: 1024px) {
-  .h1-story {
-    font-size: 40px;
-    line-height: 125%;
-    text-align: center;
-  }
+.h1-story strong {
+  padding-left: 16px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1160px) {
   .h1-story {
     flex-direction: column;
+    line-height: 110%;
+  }
+}
+@media (max-width: 740px) {
+  .h1-story {
+    font-size: 40px;
   }
 }
 
