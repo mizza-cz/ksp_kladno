@@ -2073,6 +2073,10 @@ table tbody td {
   }
 }
 
+.text-secondary {
+  color: #f2f8fc;
+}
+
 @media (max-width: 1024px) {
   .Nav {
     position: absolute;
