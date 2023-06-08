@@ -1,0 +1,47 @@
+.Form {
+  &-item + &-item {
+    margin-top: 0.75rem;
+  }
+
+  &-label {
+    display: block;
+    @include text($colorText, 1rem, $fontWeightBold, inherit);
+    margin-bottom: 0.25rem;
+
+    &--required {
+      &::after {
+        content: "*";
+        @include text($colorRed, inherit, inherit, inherit);
+      }
+    }
+  }
+
+  &-input {
+    display: block;
+    width: 100%;
+    @include text($colorText, 1rem, $fontWeightNormal, 1.2);
+    background-color: $colorWhite;
+    border: 2px solid $colorGrey--light;
+    border-radius: $borderRadiusSecondary;
+    padding: rem(12px) 1rem;
+    transition: border-color 0.25s ease-in-out;
+    @include placeholder($colorPlaceholder);
+
+    &--small {
+      font-size: 0.75rem;
+      padding: rem(12px) rem(16px);
+    }
+
+    &--withIcon {
+      padding-left: rem(48px);
+    }
+  }
+
+  &-error {
+    display: block;
+    @include text($colorWhite, rem(14px), $fontWeightBold, inherit);
+    background-color: $colorRed;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+  }
+}

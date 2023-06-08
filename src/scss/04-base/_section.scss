@@ -1,0 +1,70 @@
+
+.Section {
+  &--intro {
+    position: relative;
+    background-color: $colorWhite;
+    border-radius: 1.5rem 0;
+    padding: rem(58px) 2rem;
+    overflow: hidden;
+
+    @include respondTo(xs) {
+      padding: 4rem 1rem;
+    }
+
+    @include respondTo(xxs) {
+      padding: 4rem 0.5rem;
+    }
+    
+  }
+
+  &--white {
+    display: flex;
+    flex-direction: column;
+    background-color: $colorWhite;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: 2rem;
+    overflow: hidden;
+
+    @include respondTo(xs) {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  &--whiteBig {
+    background-color: $colorWhite;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: 3rem rem(40px);
+    overflow: hidden;
+
+    @include respondTo(xs) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &--aboutUs {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: rem(292px);
+      height: rem(82px);
+      position: absolute;
+      right: rem(-88px);
+      bottom: -1rem;
+      background-color: transparent;
+      background-image: url(../img/waves.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 0;
+
+      @include respondTo(sm) {
+        right: -12.5rem;
+        bottom: -4rem;
+      }
+    }
+  }
+}

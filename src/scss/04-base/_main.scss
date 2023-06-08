@@ -1,0 +1,7 @@
+.Main {
+  padding: 1rem 0 4rem;
+  overflow-x: hidden;
+  @include respondTo(xs) {
+    padding-bottom: 3rem;
+  }
+}

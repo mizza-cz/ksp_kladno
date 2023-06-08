@@ -1,0 +1,111 @@
+.PhotoBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    outline: none;
+
+    .PhotoBox-thumbnailContainer {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    .PhotoBox-thumbnailContainer--icon {
+      &::after {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    .PhotoBox-thumbnail {
+      transform: scale(1.06);
+      opacity: 0.4;
+    }
+
+    .PhotoBox-link {
+      text-decoration: underline;
+    }
+  }
+
+  &-thumbnailContainer {
+    @include responsiveMediumContainer(4, 3);
+    background-color: $colorWhite;
+    border-radius: $borderRadiusPrimary 0;
+
+    &::before {
+      background-image: $gradientPrimary;
+      opacity: 0;
+      transition: opacity 0.25s linear;
+    }
+
+    &--icon {
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        will-change: opacity, transform;
+      }
+    }
+
+    &--iconForward {
+      &::after {
+        background-image: url(../img/icons/arrow-right-circle-white.svg);
+      }
+    }
+
+    &--iconZoom {
+      &::after {
+        background-image: url(../img/icons/zoom-in-white.svg);
+      }
+    }
+  }
+
+  &-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    will-change: transform, opacity;
+  }
+
+  &-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include text($colorBlack, 1.25rem, $fontWeightBold, 1.2);
+    text-align: center;
+    margin-top: 0.5rem;
+
+    @include respondTo(xs) {
+      font-size: 1rem;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+  }
+
+  &-date {
+    @include text($colorGrey, 0.875rem, $fontWeightMedium, 1);
+    margin-top: 0.5rem;
+  }
+}

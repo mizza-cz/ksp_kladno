@@ -1,0 +1,348 @@
+html {
+  font-family: $fontFamilyPrimary;
+  @include text($colorText, 100%, $fontWeightNormal, 1.5);
+}
+
+h1,
+.H1,
+h2,
+.H2,
+h3,
+.H3,
+h4,
+.H4,
+h5,
+.H5,
+h6,
+.H6 {
+  font-family: $fontFamilyPrimary;
+
+  &--gradient,
+  & > span {
+    display: inline-block;
+    background: $gradientPrimary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+h1,
+.H1 {
+  @include text($colorHeading, rem(80px), $fontWeightNormal, 0.9);
+  letter-spacing: -0.03em;
+
+  @include respondTo(md) {
+    font-size: 4rem;
+  }
+
+  @include respondTo(xs) {
+    font-size: 3rem;
+  }
+
+  @include respondTo(xxs) {
+    font-size: 2.5rem;
+  }
+
+  strong {
+    display: block;
+    font-weight: $fontWeightHeavy;
+  }
+
+  &--decorative {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(292px);
+      height: rem(82px);
+      position: absolute;
+      left: 0;
+      bottom: -2rem;
+      background-color: transparent;
+      background-image: url(../img/waves-grey.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 0;
+
+      @include respondTo(xs) {
+        left: -1rem;
+        bottom: -3rem;
+        background-image: url(../img/waves.svg);
+      }
+    }
+  }
+}
+
+h2,
+.H2 {
+  @include text($colorHeading, 3rem, $fontWeightExtraBold, 1.2);
+  letter-spacing: -0.04em;
+
+  @include respondTo(sm) {
+    font-size: 2.5rem;
+  }
+
+  @include respondTo(xs) {
+    font-size: 2rem;
+    letter-spacing: 1.33333px;
+  }
+}
+
+h3,
+.H3 {
+  @include text($colorHeading, 2.5rem, $fontWeightBold, 1.2);
+
+  @include respondTo(sm) {
+    font-size: 2rem;
+  }
+
+  @include respondTo(xs) {
+    font-size: 1.75rem;
+  }
+}
+
+h4,
+.H4 {
+  @include text($colorHeading, rem(20px), $fontWeightBold, 1.2);
+  letter-spacing: 0.025em;
+}
+
+.DecorativeHeading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+  letter-spacing: 0.73em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include respondTo(xs) {
+    letter-spacing: 0.4em;
+  }
+
+  &::after {
+    content: "";
+    flex-basis: 100%;
+    display: block;
+    height: 1px;
+    background-image: $gradientPrimary;
+    opacity: 0.2;
+    margin-left: 0.625rem;
+  }
+}
+
+p,
+.Text {
+  @include text($colorText, $fontSizeNormal, $fontWeightNormal, inherit);
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+a {
+  @include text($colorPrimary, inherit, inherit, inherit);
+  text-decoration: underline;
+  cursor: pointer;
+  @include transition(color, 0.25s, ease);
+
+  &:focus {
+    outline: 2px solid;
+    outline-offset: 1px;
+  }
+
+  &:hover {
+    color: darken($colorPrimary, 5%);
+  }
+}
+
+.Link {
+  @include text($colorPrimary, inherit, inherit, inherit);
+  text-decoration: underline;
+  cursor: pointer;
+  @include transition(color, 0.25s, ease);
+
+  &:focus {
+    outline: 2px solid;
+    outline-offset: 1px;
+  }
+
+  &:hover {
+    color: darken($colorPrimary, 5%);
+  }
+
+  &--anchor {
+    &:focus,
+    &:hover {
+      padding-right: 2rem;
+      background-image: url(../img/icons/hash-white.svg);
+      background-position: center right;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--complex {
+    display: flex;
+  }
+
+  &--inverted {
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--stretched {
+    white-space: normal;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &--gradient {
+    position: relative;
+    background: $gradientPrimary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      display: none;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0.125rem;
+      background-image: $gradientPrimary;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+b,
+strong {
+  font-weight: $fontWeightBold;
+}
+
+.DashList {
+  &-item {
+    position: relative;
+    @include text($colorText, $fontSizeNormal, $fontWeightNormal, normal);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 0.5rem;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: rem(10px);
+      background-color: $colorWhite;
+    }
+  }
+}
+
+.DotList {
+  &-item {
+    position: relative;
+    @include text($colorText, $fontSizeNormal, $fontWeightNormal, normal);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "•";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.OrderedList {
+  counter-reset: li-counter;
+
+  &-item {
+    position: relative;
+    counter-increment: li-counter;
+    @include text($colorText, $fontSizeNormal, $fontWeightNormal, normal);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: counter(li-counter) ".";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.UnstyledList {
+  &-item {
+    @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+code,
+kbd,
+pre,
+samp,
+var {
+  display: inline-flex;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  @include text($colorBlack, $fontSizeSmall, $fontWeightNormal, normal);
+  background-color: $colorGrey--light;
+  padding: 0.5rem 0.75rem;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: $colorGrey;
+  border: none;
+  margin: 0;
+}

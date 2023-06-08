@@ -1,0 +1,71 @@
+.Footer {
+  padding-bottom: rem(56px);
+
+  @include respondTo(xs) {
+    padding-bottom: 3rem;
+  }
+
+  &-title {
+    display: inline-block;
+    @include text($colorHeading, 2rem, $fontWeightMedium, 1);
+    letter-spacing: -0.1em;
+    background: $gradientPrimary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    padding-right: 0.5rem;
+
+    strong {
+      display: block;
+      font-weight: $fontWeightHeavy;
+      line-height: 0.9;
+      letter-spacing: -3px;
+    }
+  }
+
+  &-logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(155px);
+      height: rem(46px);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: transparent;
+      background-image: url(../img/waves-logo-bottom.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 0;
+    }
+  }
+
+  &-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      display: inline-flex;
+      @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+      margin: 0.25rem 2rem 0.25rem 0;
+
+      @include respondTo(xs) {
+        flex-basis: 50%;
+        padding-right: 1rem;
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs" class="Preload" id="root">
+  <head>
+    <title>{{ pageTitle }}</title>
+
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="eSports.cz, s.r.o. - www.esportsmedia.cz"/>
+    <meta name="keywords" content="plavání, Kladno"/>
+    <meta name="description" content="Jsme klub sportovního plavání s dlouholetou tradicí. Naším primárním cílem je osvojování a zdokonalování sportovních dovedností, jimiž sportovec projevuje svůj výkonnostní potenciál. Plavci klubu sportovního plavání Kladno se několik desítek let účastní mnoha vrcholných plaveckých závodů, ze kterých pravidelně přiváží cenné kovy (Mistrovství ČR ve všech věkových kategorií, účast na Mistrovství Evropy a Mistrovství světa)."/>
+    <meta name="robots" content="index,follow"/>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css"/>
+
+    <!-- JS -->
+    <!-- build:js -->
+    <script src="./js/components/menu.js" defer="defer"></script>
+    <script src="./js/components/modal.js" defer="defer"></script>
+    <script src="./js/features/injectYouTube.js" defer="defer"></script>
+    <script src="./js/vendors/baguetteBox.min.js" defer="defer"></script>
+    <script src="./js/vendors/swiper-bundle.min.js" defer="defer"></script>
+    <script src="./js/main.js" defer="defer"></script>
+    <!-- endbuild -->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png"/>
+    <link rel="manifest" href="./site.webmanifest"/>
+
+    <!-- Facebook -->
+    <meta property="og:title" content="{{ pageTitle }}"/>
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="Jsme klub sportovního plavání s dlouholetou tradicí. Naším primárním cílem je osvojování a zdokonalování sportovních dovedností, jimiž sportovec projevuje svůj výkonnostní potenciál. Plavci klubu sportovního plavání Kladno se několik desítek let účastní mnoha vrcholných plaveckých závodů, ze kterých pravidelně přiváží cenné kovy (Mistrovství ČR ve všech věkových kategorií, účast na Mistrovství Evropy a Mistrovství světa)."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content="./img/og_image.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Klub sportovního plavání Kladno"/>
+    <meta property="og:locale" content="cs_CZ"/>
+  </head>
+  <body>
+    {% include "./partials/_header.njk" %}
+    {% block main %}{% endblock %}
+    {% include "./partials/_footer.njk" %}
+    {% block modals %}{% endblock %}
+  </body>
+</html>

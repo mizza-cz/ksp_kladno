@@ -1,0 +1,19 @@
+.PartnerBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respondTo(sm) {
+    width: rem(200px);
+  }
+
+  a {
+    display: block;
+
+    img,
+    svg {
+      @include imgResponsive();
+      max-height: rem(130px);
+    }
+  }
+}

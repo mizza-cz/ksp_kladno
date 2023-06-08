@@ -1,0 +1,109 @@
+.Modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $colorOverlay;
+  z-index: z(modal);
+  overflow: hidden;
+
+  &.is-active {
+    display: flex;
+    animation-name: fadeInModal;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+  }
+
+  &.is-closing {
+    display: flex;
+    animation-name: fadeOutModal;
+    animation-duration: 0.25s;
+
+    .Modal-dialog {
+      animation-name: slideDownModalDialog;
+      animation-duration: 0.25s;
+    }
+  }
+
+  &-dialog {
+    position: relative;
+    width: 80rem;
+    max-width: calc(100% - 2rem);
+    text-align: center;
+    background-color: $colorSecondary;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: 3rem;
+    overflow: auto;
+    animation-name: slideUpModalDialog;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+
+    @include respondTo(xs) {
+      padding: 1rem;
+    }
+  }
+
+  &-heading {
+    @include text($colorBlack--light, 1.5rem, $fontWeightSemiBold, 1.2);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .CloseButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutModal {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpModalDialog {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideDownModalDialog {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

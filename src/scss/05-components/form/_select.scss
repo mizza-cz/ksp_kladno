@@ -1,0 +1,17 @@
+.Select {
+  --selectWidth: 12.5rem;
+  display: block;
+  width: var(--selectWidth);
+  @include text($colorText, 1rem, $fontWeightNormal, 1.2);
+  background-color: $colorBlue--light;
+  background-image: url(../img/icons/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+  background-size: 24px 24px;
+  border: 2px solid transparent;
+  border-radius: $borderRadiusSecondary;
+  padding: rem(12px) 1rem;
+  padding-right: rem(40px);
+  transition: border-color 0.25s ease-in-out;
+  @include textOverflowEllipsis();
+}

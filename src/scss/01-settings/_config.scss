@@ -1,0 +1,75 @@
+$breakpoints-max: (
+  "xxxs": 320px,
+  "xxs": 400px,
+  "xs": 576px,
+  "sm": 800px,
+  "md": 1024px,
+  "lg": 1366px,
+  "xl": 1920px
+);
+
+$breakpoints-min: (
+  "xxs": 321px,
+  "xs": 401px,
+  "sm": 577px,
+  "md": 801px,
+  "lg": 1025px,
+  "xl": 1367px
+);
+
+$colors: (
+  "primary": $colorPrimary,
+  "secondary": $colorSecondary,
+  "tertiary": $colorTertiary,
+  "text": $colorText,
+  "black": $colorBlack,
+  "black--light": $colorBlack--light,
+  "blue": $colorBlue,
+  "blue--light": $colorBlue--light,
+  "green": $colorGreen,
+  "grey": $colorGrey,
+  "grey--dark": $colorGrey--dark,
+  "grey--light": $colorGrey--light,
+  "orange": $colorOrange,
+  "red": $colorRed,
+  "yellow": $colorYellow,
+  "white": $colorWhite
+);
+
+$fontSizes: (
+  "0": $fontSizeZero,
+  "tiny": $fontSizeTiny,
+  "extraSmall": $fontSizeExtraSmall,
+  "small": $fontSizeSmall,
+  "normal": $fontSizeNormal,
+  "big": $fontSizeBig,
+  "extraBig": $fontSizeExtraBig,
+  "huge": $fontSizeHuge
+);
+
+$fontWeights: (
+  "thin": $fontWeightThin,
+  "extraLight": $fontWeightExtraLight,
+  "light": $fontWeightLight,
+  "normal": $fontWeightNormal,
+  "medium": $fontWeightMedium,
+  "semiBold": $fontWeightSemiBold,
+  "bold": $fontWeightBold,
+  "extraBold": $fontWeightExtraBold,
+  "heavy": $fontWeightHeavy
+);
+
+$spacings: (0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 80, 96);
+
+$z-indexes: (
+  "default": 1,
+  "tooltip": 10,
+  "overlay": 100,
+  "mobileHeader": 101,
+  "mobileMenu": 102,
+  "subMenu": 200,
+  "popup": 999,
+  "modal": 9999,
+  "flashMessage": 99999,
+  "loader": 99999
+);

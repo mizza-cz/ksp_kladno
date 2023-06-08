@@ -1,0 +1,102 @@
+.NewsArticle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &:hover {
+    .NewsArticle-thumbnail {
+      transform: scale(1.06);
+    }
+
+    .NewsArticle-link {
+      text-decoration: underline;
+    }
+
+    .NewsArticle-readMore {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  &-thumbnailContainer {
+    @include responsiveMediumContainer(16, 9);
+    border-radius: $borderRadiusPrimary;
+  }
+
+  &-thumbnail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.25s ease-in-out;
+    will-change: transform;
+  }
+
+  &-metaContainer {
+    display: flex;
+    margin: 0.5rem 0;
+  }
+
+  &-author {
+    @include text($colorPrimary, 0.875rem, $fontWeightNormal, 1);
+    border-right: 1px solid $colorWhite;
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &-date {
+    @include text($colorPrimary, 0.875rem, $fontWeightNormal, 1);
+  }
+
+  &-link {
+    text-decoration: none;
+  }
+
+  &-title {
+    @include text($colorPrimary, 1.5rem, $fontWeightMedium, 1.2);
+    margin-top: 1rem;
+  }
+
+  &-perex {
+    display: -webkit-box;
+    @include text($colorText, 1rem, $fontWeightNormal, 1.5);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-top: 0.25rem;
+  }
+
+  &-badge {
+    display: inline-block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    @include text($colorText, 0.75rem, $fontWeightMedium, 1);
+    background-color: $colorTertiary;
+    border-radius: $borderRadiusPrimary;
+    padding: 0.5rem;
+  }
+
+  &-readMore {
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: $fontWeightMedium;
+    margin-top: 1rem;
+
+    &::after {
+      content: "";
+      display: none;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0.125rem;
+      background-image: $gradientPrimary;
+    }
+  }
+}

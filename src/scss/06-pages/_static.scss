@@ -1,0 +1,123 @@
+.StaticPage {
+  h1 {
+    @include text($colorHeading, 2rem, $fontWeightMedium, 1.25);
+    margin-bottom: 1rem;
+
+    @include respondTo(sm) {
+      font-size: 1.75rem;
+    }
+
+    @include respondTo(xs) {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2 {
+    @include text($colorHeading, 1.25rem, $fontWeightMedium, 1.4);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    @include text($colorHeading, 1.125rem, $fontWeightMedium, 1.3);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    @include text($colorText, $fontSizeNormal, $fontWeightNormal, 1.75);
+  }
+
+  p + p {
+    margin-top: 0.5rem;
+  }
+
+  img {
+    @include imgResponsive();
+  }
+
+  figcaption {
+    @include text($colorGrey--dark, $fontSizeSmall, $fontWeightNormal, inherit);
+    margin-top: 0.5rem;
+  }
+
+  ol {
+    counter-reset: li-counter;
+
+    li {
+      position: relative;
+      counter-increment: li-counter;
+      @include text($colorText, $fontSizeNormal, $fontWeightNormal, inherit);
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: counter(li-counter) ".";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $colorBlue;
+        font-weight: $fontWeightMedium;
+      }
+    }
+  }
+
+  ul {
+    li:not(.SideNav-item) {
+      position: relative;
+      @include text($colorText, $fontSizeNormal, $fontWeightNormal, inherit);
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: rem(8px);
+        height: 2px;
+        position: absolute;
+        left: 0;
+        top: rem(11px);
+        background-color: $colorBlue;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+
+    thead {
+      tr {
+        border-bottom: 1px solid $colorBlack;
+      }
+
+      th {
+        @include text($colorText, $fontSizeExtraSmall, $fontWeightMedium, 0.75rem);
+        text-align: left;
+        text-transform: uppercase;
+        background-color: $colorGrey--light;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $colorBlack;
+      }
+
+      td {
+        @include text($colorText, $fontSizeSmall, $fontWeightNormal, 1.375rem);
+        text-align: left;
+        background-color: $colorWhite;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

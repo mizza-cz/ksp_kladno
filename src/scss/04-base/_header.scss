@@ -1,0 +1,23 @@
+.Header {
+  padding: 1rem 0;
+  position: relative;
+  z-index: 999;
+ 
+  &-logo {
+    display: block;
+    margin-left: rem(-68px);
+
+    @include respondTo(lg) {
+      margin-left: 0;
+    }
+
+    img {
+      display: block;
+
+      @include respondTo(xs) {
+        width: rem(42px);
+        height: auto;
+      }
+    }
+  }
+}

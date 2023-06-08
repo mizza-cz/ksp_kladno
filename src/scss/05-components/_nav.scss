@@ -1,0 +1,205 @@
+@mixin subMenuActive() {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.Nav {
+  @include respondTo(md) {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: $colorWhite;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: all 0.25s $easeOutQuad;
+    z-index: z(mobileMenu);
+
+    &.is-active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respondTo(md) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &-item {
+    margin: 0 1rem;
+
+    @media (max-width: 1200px) {
+      margin: 0 0.5rem;
+    }
+
+    @include respondTo(md) {
+      text-align: center;
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &--hasSubMenu {
+      position: relative;
+
+      @media (hover: hover) and (min-width: 1025px) {
+        &:hover {
+          .SubMenu {
+            @include subMenuActive();
+            transition-timing-function: $easeOutQuad;
+          }
+        }
+
+        .Nav-link {
+          cursor: default;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-link {
+    @include text($colorSecondary, $fontSizeSmall, $fontWeightSemiBold, 1.2);
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+      outline: none;
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-decoration-skip-ink: none;
+      color: $colorSecondary;
+      @include respondTo(md) {
+        color: $colorPrimary;
+      }
+    }
+
+    @include respondTo(md) {
+      font-size: $fontSizeExtraBig;
+      color: $colorPrimary;
+    }
+  }
+
+  .SubMenu {
+    min-width: 14rem;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    background-color: $colorPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(1.5rem) scale(0.96);
+    transition: opacity 0.25s $easeInQuad 0.25s, visibility 0.25s $easeInQuad 0.25s,
+      transform 0.25s $easeInQuad 0.25s;
+    will-change: opacity, transform;
+    z-index: z(default);
+
+    @include respondTo(md) {
+      display: none;
+      min-width: 0;
+      width: 100%;
+      position: static;
+      top: 0;
+      background-color: $colorWhite;
+      border-radius: 0;
+      padding: 1rem 0 0;
+      transform: none;
+    }
+
+    &.is-active {
+      @include subMenuActive();
+      transition-timing-function: $easeOutQuad;
+      transition-delay: 0s;
+
+      @include respondTo(md) {
+        display: block;
+        transition: none;
+        animation-name: fadeInUpSubMenu;
+        animation-duration: 0.5s;
+        animation-timing-function: $easeOutQuad;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: rem(-10px);
+      left: rem(30px);
+      border-style: solid;
+      border-width: 0 rem(8px) rem(12px) rem(8px);
+      border-color: transparent transparent $colorPrimary transparent;
+
+      @include respondTo(md) {
+        display: none;
+      }
+    }
+
+    &-item {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include respondTo(md) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-link {
+      @include text($colorWhite, $fontSizeSmall, $fontWeightNormal, 1.2);
+      text-decoration: none;
+
+      &:focus,
+      &:hover,
+      &:active {
+        outline: none;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-skip-ink: none;
+      }
+
+      @include respondTo(md) {
+        color: $colorText;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUpSubMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

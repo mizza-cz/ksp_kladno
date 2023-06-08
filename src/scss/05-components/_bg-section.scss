@@ -1,0 +1,31 @@
+.bottom-bg {
+  position: absolute;
+  width: 100%;
+  background-repeat: repeat;
+  background-size: cover;
+  left: 0;
+  margin: 0 auto;
+  background-position: center top;
+  right: 0;
+  bottom: 0;
+  height: 350px;
+  z-index: 0;
+  background-image: url('../img/icons/bg-bottom.svg');
+}
+.h1-story {
+  color: $colorSecondary;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 68px;
+  line-height: 89.6%;
+  margin-bottom: 32px;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+    line-height: 125%;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}

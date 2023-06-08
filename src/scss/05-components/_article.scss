@@ -1,0 +1,194 @@
+.Article {
+  padding-bottom: 4rem;
+
+  @include respondTo(sm) {
+    padding-bottom: 3rem;
+  }
+
+  @include respondTo(xs) {
+    padding-bottom: 1rem;
+  }
+
+  &-body {
+    max-width: rem(600px);
+    margin: rem(80px) auto 0;
+
+    @include respondTo(sm) {
+      margin-top: 3rem;
+    }
+
+    @include respondTo(xs) {
+      margin-top: 2rem;
+    }
+  }
+
+  &-widget {
+    margin: rem(56px) rem(-208px);
+
+    @media (max-width: 1016px) {
+      margin: rem(56px) 0;
+    }
+
+    @include respondTo(sm) {
+      margin: 2.5rem 0;
+    }
+
+    @include respondTo(xs) {
+      margin: 2rem 0;
+    }
+  }
+
+  &-meta {
+    display: flex;
+    align-items: center;
+  }
+
+  &-date {
+    @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+    letter-spacing: 0.32em;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+
+    @include respondTo(xs) {
+      letter-spacing: 0.4em;
+    }
+  }
+
+  &-category {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    position: relative;
+    @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+    letter-spacing: 0.73em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @include respondTo(xs) {
+      letter-spacing: 0.4em;
+    }
+
+    &::before {
+      content: "";
+      flex-basis: rem(132px);
+      display: block;
+      height: 1px;
+      background-image: $gradientPrimary;
+      opacity: 0.2;
+      margin-right: 0.625rem;
+    }
+  }
+
+  h1 {
+    @include text($colorHeading, 3rem, $fontWeightBold, 1.2);
+    letter-spacing: -0.02em;
+    margin-top: 1.5rem;
+
+    @include respondTo(sm) {
+      font-size: 2.5rem;
+    }
+
+    @include respondTo(xs) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    @include text($colorHeading, rem(36px), $fontWeightBold, 1.2);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+
+    @include respondTo(sm) {
+      font-size: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    @include respondTo(xs) {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-perex {
+    @include text($colorText, 1.25rem, $fontWeightNormal, 1.4);
+    margin-top: 1rem;
+  }
+
+  p {
+    @include text($colorText, 1rem, $fontWeightNormal, 1.4);
+  }
+
+  p + p {
+    margin-top: 1.5rem;
+  }
+
+  blockquote,
+  blockquote p {
+    @include text($colorText, rem(36px), $fontWeightNormal, 1.4);
+    margin-bottom: 0.5rem;
+
+    @include respondTo(sm) {
+      font-size: 1.75rem;
+    }
+
+    @include respondTo(xs) {
+      font-size: 1.25rem;
+    }
+  }
+
+  hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-image: $gradientPrimary;
+    opacity: 0.2;
+    margin: 3rem 0;
+
+    @include respondTo(sm) {
+      margin: 2.5rem 0;
+    }
+
+    @include respondTo(xs) {
+      margin: 2rem 0;
+    }
+  }
+}
+
+table {
+  width: 100%;
+
+  thead {
+    tr {
+      border-bottom: 1px solid $colorPrimary;
+    }
+
+    th {
+      @include text($colorWhite, $fontSizeNormal, $fontWeightMedium, inherit);
+      text-align: left;
+      text-transform: uppercase;
+      background-color: $colorPrimary;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $colorPrimary;
+
+      &:nth-child(even) {
+        td {
+          background-color: $colorGrey--light;
+        }
+      }
+    }
+
+    td {
+      @include text($colorText, $fontSizeNormal, $fontWeightNormal, inherit);
+      text-align: left;
+      background-color: $colorWhite;
+      padding: 0.5rem 1rem;
+    }
+  }
+}

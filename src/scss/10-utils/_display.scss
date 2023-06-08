@@ -1,0 +1,172 @@
+// Display classes
+$display: none, block, inline-block, flex, inline-flex;
+
+@each $val in $display {
+  .u-display-#{$val} {
+    display: $val;
+  }
+}
+
+@include respondTo(md) {
+  @each $val in $display {
+    .u-md-display-#{$val} {
+      display: $val;
+    }
+  }
+}
+
+@include respondTo(sm) {
+  @each $val in $display {
+    .u-sm-display-#{$val} {
+      display: $val;
+    }
+  }
+}
+
+@include respondTo(xs) {
+  @each $val in $display {
+    .u-xs-display-#{$val} {
+      display: $val;
+    }
+  }
+}
+
+// Flex direction classes
+.u-flex-column {
+  flex-direction: column;
+}
+
+.u-md-flex-column {
+  @include respondTo(md) {
+    flex-direction: column;
+  }
+}
+
+.u-sm-flex-column {
+  @include respondTo(sm) {
+    flex-direction: column;
+  }
+}
+
+.u-xs-flex-column {
+  @include respondTo(xs) {
+    flex-direction: column;
+  }
+}
+
+// Flex wrap classes
+.u-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.u-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// Flex grow, shrink classes
+.u-flex-grow-1 {
+  flex-grow: 1;
+}
+
+.u-flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+// Justify content classes
+$justify-content: flex-start, flex-end, center, space-between, space-around;
+
+@each $val in $justify-content {
+  .u-justify-#{$val} {
+    justify-content: $val;
+  }
+}
+
+@include respondTo(md) {
+  @each $val in $justify-content {
+    .u-md-justify-#{$val} {
+      justify-content: $val;
+    }
+  }
+}
+
+@include respondTo(sm) {
+  @each $val in $justify-content {
+    .u-sm-justify-#{$val} {
+      justify-content: $val;
+    }
+  }
+}
+
+@include respondTo(xs) {
+  @each $val in $justify-content {
+    .u-xs-justify-#{$val} {
+      justify-content: $val;
+    }
+  }
+}
+
+// Align items classes
+$align-items: flex-start, flex-end, center, stretch;
+
+@each $val in $align-items {
+  .u-align-items-#{$val} {
+    align-items: $val;
+  }
+}
+
+@include respondTo(md) {
+  @each $val in $align-items {
+    .u-md-align-items-#{$val} {
+      align-items: $val;
+    }
+  }
+}
+
+@include respondTo(sm) {
+  @each $val in $align-items {
+    .u-sm-align-items-#{$val} {
+      align-items: $val;
+    }
+  }
+}
+
+@include respondTo(xs) {
+  @each $val in $align-items {
+    .u-xs-align-items-#{$val} {
+      align-items: $val;
+    }
+  }
+}
+
+// Order classes
+$order: 1, 2, 3, 4, 5;
+
+@each $val in $order {
+  .u-order-#{$val} {
+    order: $val;
+  }
+}
+
+@include respondTo(md) {
+  @each $val in $order {
+    .u-md-order-#{$val} {
+      order: $val;
+    }
+  }
+}
+
+@include respondTo(sm) {
+  @each $val in $order {
+    .u-sm-order-#{$val} {
+      order: $val;
+    }
+  }
+}
+
+@include respondTo(xs) {
+  @each $val in $order {
+    .u-xs-order-#{$val} {
+      order: $val;
+    }
+  }
+}

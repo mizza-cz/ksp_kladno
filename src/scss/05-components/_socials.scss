@@ -1,0 +1,29 @@
+.Socials {
+  display: flex;
+  align-items: center;
+
+  &-item {
+    display: inline-flex;
+  }
+
+  &-link {
+    display: inline-flex;
+
+    &:focus,
+    &:hover {
+      .Socials-icon {
+        transform: scale(1.2);
+        transition-duration: 0.25s;
+      }
+    }
+  }
+
+  &-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(24px);
+    height: rem(24px);
+    transition: transform 0.1s ease-in;
+  }
+}

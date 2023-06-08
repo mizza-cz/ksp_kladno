@@ -1,0 +1,13 @@
+@each $key, $val in $colors {
+  .c-#{$key} {
+    color: $val;
+  }
+
+  .bgc-#{$key} {
+    background-color: $val;
+  }
+
+  .fill-#{$key} {
+    fill: $val;
+  }
+}

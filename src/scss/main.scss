@@ -1,0 +1,58 @@
+@use 'sass:math';
+
+@import '01-settings/variables';
+@import '01-settings/config';
+
+@import '02-tools/functions';
+@import '02-tools/mixins';
+
+@import '03-generic/normalize';
+@import '03-generic/reset';
+
+@import '04-base/body';
+@import '04-base/container';
+@import '04-base/customScrollbar';
+@import '04-base/footer';
+@import '04-base/grid';
+@import '04-base/header';
+@import '04-base/main';
+@import '04-base/overlay';
+@import '04-base/section';
+@import '04-base/sideBar';
+@import '04-base/typography';
+@import '04-base/wrappers';
+
+@import '05-components/article';
+@import '05-components/buttons';
+
+@import '05-components/form/basicElements';
+@import '05-components/form/select';
+
+@import '05-components/galleryBox';
+@import '05-components/modal';
+@import '05-components/bg-section';
+@import '05-components/nav';
+@import '05-components/newsArticle';
+@import '05-components/pagination';
+@import '05-components/partnerBox';
+@import '05-components/photoBox';
+@import '05-components/socials';
+@import '05-components/table';
+@import '05-components/videoInterview';
+@import '05-components/youTubeVideo';
+
+// @import "06-pages/static";
+// @import "07-themes/";
+
+@import '08-vendors/baquetteBox';
+@import '08-vendors/swiper';
+@import '09-vendors-extensions/baquetteBox';
+@import '09-vendors-extensions/swiper';
+
+@import '10-utils/colors';
+@import '10-utils/display';
+@import '10-utils/misc';
+@import '10-utils/spacing';
+@import '10-utils/text';
+
+// @import "fixes";

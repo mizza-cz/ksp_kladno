@@ -1,0 +1,45 @@
+#close-button.baguetteBox-button,
+#previous-button.baguetteBox-button,
+#next-button.baguetteBox-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba($colorGrey, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+
+  &:focus,
+  &:hover {
+    background-color: $colorGrey;
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+#close-button.baguetteBox-button {
+  right: 2%;
+  background-image: url(../img/icons/x-white.svg);
+}
+
+#previous-button.baguetteBox-button {
+  top: calc(50% - 20px);
+  background-image: url(../img/icons/chevron-left-white.svg);
+}
+
+#next-button.baguetteBox-button {
+  top: calc(50% - 20px);
+  background-image: url(../img/icons/chevron-right-white.svg);
+}
+
+#baguetteBox-overlay .full-image figcaption {
+  font-family: $fontFamilyPrimary;
+  color: $colorGrey--light;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+#baguetteBox-overlay {
+  background-color: $colorOverlay !important;
+}

@@ -1,0 +1,74 @@
+.Table {
+  width: 100%;
+
+  thead {
+    tr {
+      border-bottom: 2px solid $colorWhite;
+    }
+
+    th {
+      @include text($colorText, $fontSizeNormal, $fontWeightBold, inherit);
+      text-align: left;
+      text-transform: uppercase;
+      background-color: $colorSecondary;
+      padding: 0.5rem 1rem;
+
+      abbr {
+        text-decoration: none;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 2px solid $colorWhite;
+    }
+
+    td {
+      @include text($colorText, $fontSizeNormal, $fontWeightNormal, inherit);
+      text-align: left;
+      background-color: transparent;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &--responsive {
+    thead {
+      @include respondTo(xs) {
+        @include srOnly();
+      }
+    }
+
+    tbody {
+      tr {
+        @include respondTo(xs) {
+          border-bottom: none;
+        }
+      }
+
+      td {
+        @include respondTo(xs) {
+          display: block;
+          border-bottom: 1px solid $colorWhite;
+          padding: 0.5rem 0;
+
+          &:empty {
+            display: none;
+          }
+
+          &::before {
+            content: attr(data-th);
+            display: block;
+            @include text($colorSecondary, $fontSizeNormal, $fontWeightBold, inherit);
+          }
+        }
+      }
+    }
+  }
+
+  &-teamLogo {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+}

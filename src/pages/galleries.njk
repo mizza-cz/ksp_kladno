@@ -1,0 +1,74 @@
+{% set pageTitle = 'Fotogalerie | Klub sportovního plavání Kladno' %}
+{% extends "../templates/layout.njk" %}
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+      <!-- Galleries -->
+      <div class="Section Section--whiteBig">
+        <h1 class="H2 H2--gradient">Fotogalerie</h1>
+        <!-- Filters -->
+        <div class="Filters u-mt-24">
+          <div class="Filters-item">
+            <label class="Form-label" for="@TODO">Měsíc</label>
+            <select class="Select" name="@TODO" id="@TODO">
+              <option value="@TODO">{data}</option>
+              <option value="@TODO">{data}</option>
+              <option value="@TODO">{data}</option>
+            </select>
+          </div>
+          <div class="Filters-item u-flex-grow-1" role="search">
+            <form action="@TODO">
+              <label class="Form-label" for="@TODO">Hledaný výraz</label>
+              <div class="u-display-flex">
+                <input class="Form-input u-mr-16" type="search" name="@TODO" id="@TODO"/>
+                <button class="Button Button--small u-flex-shrink-0" type="submit">Vyhledat</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <ul class="ArchiveList u-mt-40 u-xs-mt-24">
+          <li>
+            <figure class="GalleryBox GalleryBox--big">
+              <div class="GalleryBox-thumbnailContainer">
+                <img class="GalleryBox-thumbnail" src="https://dummyimage.com/480x300/c2e0ff/fff.jpg&amp;text=photo" width="240" height="150" alt="" loading="lazy" aria-hidden="true"/>
+              </div>
+              <figcaption class="GalleryBox-textContainer">
+                <div class="GalleryBox-tagsContainer">
+                  <span class="GalleryBox-date">15. 10. 2022</span>
+                </div>
+                <a href="#" class="GalleryBox-title Link--inverted Link--stretched">{gallery name}</a>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="GalleryBox GalleryBox--big">
+              <div class="GalleryBox-thumbnailContainer">
+                <img class="GalleryBox-thumbnail" src="https://dummyimage.com/480x300/c2e0ff/fff.jpg&amp;text=photo" width="240" height="150" alt="" loading="lazy" aria-hidden="true"/>
+              </div>
+              <figcaption class="GalleryBox-textContainer">
+                <div class="GalleryBox-tagsContainer">
+                  <span class="GalleryBox-date">15. 10. 2022</span>
+                </div>
+                <a href="#" class="GalleryBox-title Link--inverted Link--stretched">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="GalleryBox GalleryBox--big">
+              <div class="GalleryBox-thumbnailContainer">
+                <img class="GalleryBox-thumbnail" src="https://dummyimage.com/480x300/c2e0ff/fff.jpg&amp;text=photo" width="240" height="150" alt="" loading="lazy" aria-hidden="true"/>
+              </div>
+              <figcaption class="GalleryBox-textContainer">
+                <div class="GalleryBox-tagsContainer">
+                  <span class="GalleryBox-date">15. 10. 2022</span>
+                </div>
+                <a href="#" class="GalleryBox-title Link--inverted Link--stretched">Lorem ipsum dolor sit amet consectetur</a>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,236 @@
+{% set pageTitle = 'Klub sportovního plavání Kladno' %}
+{% extends "../templates/layout.njk" %}
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+      <!-- Intro, News -->
+      <div class="Grid">
+        <div class="Grid-col Grid-col--8 Grid-col--sm-12">
+          <div class="Section Section--intro u-height-100p">
+            <h1 class="H1 H1--gradient H1--decorative u-tt-uppercase u-z-index-3">
+              <span class="u-position-relative">Klub
+                <strong>sportovního plavání</strong>
+              </span>
+            </h1>
+            <!-- Slider -->
+            <div class="swiper swiper--intro" id="js-carousel--intro">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/intro-1.jpg" alt="KSP Kladno"></div>
+                <div class="swiper-slide"><img src="./img/intro-2.jpg" alt="KSP Kladno"></div>
+                <div class="swiper-slide"><img src="./img/intro-3.jpg" alt="KSP Kladno"></div>
+                <div class="swiper-slide"><img src="./img/intro-4.jpg" alt="KSP Kladno"></div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div class="Grid-col Grid-col--4 Grid-col--sm-12 u-sm-mt-48">
+          <section>
+            <h2 class="DecorativeHeading">Novinky</h2>
+            <article class="NewsArticle u-mt-16">
+              <div class="NewsArticle-thumbnailContainer">
+                <img class="NewsArticle-thumbnail" src="./img/placeholder-2.jpg" alt="" aria-hidden="true"/>
+              </div>
+              <h3 class="NewsArticle-title">
+                <a class="NewsArticle-link Link--stretched" href="#">TJ Lars Kladno představuje nové stránky od společnosti eSports.cz</a>
+              </h3>
+              <a href="#" class="NewsArticle-readMore Link--gradient u-tt-uppercase">číst více</a>
+            </article>
+          </section>
+        </div>
+      </div>
+      <!-- Competitions -->
+      <div class="Grid u-mt-56">
+        <div class="Grid-col Grid-col--6 Grid-col--sm-12">
+          <section class="Section Section--white u-position-relative">
+            <h2 class="DecorativeHeading">Poslední závod</h2>
+            <a href="#" class="Link--stretched Link--inverted u-fs-huge u-mt-24">
+              <strong>Jarní cena Prahy 2022</strong>
+            </a>
+            <time class="u-mt-24" datetime="2022-03-26">26. 3. 2022</time>
+          </section>
+        </div>
+        <div class="Grid-col Grid-col--6 Grid-col--sm-12 u-sm-mt-24">
+          <section class="Section Section--white u-position-relative">
+            <h2 class="DecorativeHeading">Nadcházející závod</h2>
+            <a href="#" class="Link--stretched Link--inverted u-fs-huge u-mt-24">
+              <strong>Cena Mladé Boleslavi 2022</strong>
+            </a>
+            <time class="u-mt-24" datetime="2022-09-18">18. 9. 2022</time>
+          </section>
+        </div>
+      </div>
+      <!-- Video interview -->
+      <section class="VideoInterview u-mt-56 u-xs-mt-48">
+        <div class="VideoInterview-textContainer">
+          <span class="u-fs-small c-secondary">Video</span>
+          <div class="u-display-flex u-align-items-center u-justify-space-between u-xs-flex-column u-xs-align-items-flex-start">
+            <h2 class="H2 VideoInterview-title u-mt-8">
+              <a href="#modal-video-interview" class="Link--stretched js-injectYouTube js-modal-open" data-youtube-src="https://www.youtube.com/embed/2UqRPUJAWbc?autoplay=1" role="button" aria-controls="modal-video-interview" aria-haspopup="dialog" aria-expanded="false">Polohová štafeta KSP&nbsp;Kladno v&nbsp;Mladé Boleslavi</a>
+            </h2>
+            <svg class="VideoInterview-icon u-xs-mt-48" xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none" viewbox="0 0 80 80" focusable="false" aria-hidden="true">
+              <circle cx="40" cy="40" r="40" fill="#F2F8FC"/>
+              <path fill="url(#a)" d="M50 40l-17.143 9.897V30.103L50 40z"/>
+              <defs>
+                <lineargradient id="a" x1="29.63" x2="33.24" y1="28.57" y2="53.83" gradientunits="userSpaceOnUse">
+                  <stop stop-color="#467BCB"/>
+                  <stop offset="1" stop-color="#12B9DD"/>
+                </lineargradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <img class="VideoInterview-img" src="./img/placeholder-2.jpg" alt="" loading="lazy" aria-hidden="true"/>
+      </section>
+      <!-- Banner -->
+      <aside class="Section Section--white u-p-0 u-mt-56 u-xs-mt-48">
+        <a href="#" class="Link--complex" aria-label="@TODO - banner name">
+          <img class="u-img-responsive u-center-block" src="https://dummyimage.com/1222x240/fff/000000.jpg&text=IMG+BANNER" alt=""/>
+        </a>
+      </aside>
+      <!-- About us -->
+      <section class="Section Section--aboutUs u-mt-56 u-xs-mt-48">
+        <h2 class="H2 H2--gradient">Kdo jsme</h2>
+        <div class="Grid u-mt-24">
+          <div class="Grid-col Grid-col--6 Grid-col--sm-12">
+            <img class="u-content-img" src="./img/placeholder-1.jpg" alt=""/>
+          </div>
+          <div class="Grid-col Grid-col--6 Grid-col--sm-12 u-sm-mt-32">
+            <p class="u-fs-big">Jsme klub sportovního plavání s dlouholetou tradicí. Naším primárním cílem je osvojování a zdokonalování sportovních dovedností, jimiž sportovec projevuje svůj výkonnostní potenciál. Plavci klubu sportovního plavání Kladno se několik desítek let účastní mnoha vrcholných plaveckých závodů, ze kterých pravidelně přiváží cenné kovy (Mistrovství ČR ve všech věkových kategorií, účast na Mistrovství Evropy a Mistrovství světa).</p>
+            <p class="u-fs-big">Řadu let v městském Aquaparku vychováváme reprezentanty, kteří reprezentují Českou republiku po celém světě.</p>
+            <p class="u-fs-big">Do klubu nabíráme plavce od dětských let (5 - 6), přičemž od začátku vytváříme osobnost sportovce.</p>
+            <p class="u-fs-big">V základních kurzech, do kterých nám přicházejí ti nejmenší plavci, začínáme s výukou základních plaveckých dovedností, které postupnými kroky zdokonalujeme. Veškeré tréninky u nás zajišťují profesionální trenéři a školení cvičitelé.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Photo gallery -->
+      <section class="Section Section--whiteBig u-display-flex u-flex-wrap u-align-items-center u-justify-space-between u-mt-56 u-xs-mt-48">
+        <h2 class="H2 H2--gradient">Fotogalerie</h2>
+        <a href="#" class="Button u-xs-order-3 u-xs-mt-24">
+          <span>Přejít do fotogalerie</span>
+        </a>
+        <div class="PhotoGalleryGrid PhotoGalleryGrid--homepage u-width-100p u-mt-24 u-overflow-x-auto js-photogallery">
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+          <a class="PhotoBox" href="./img/placeholder-1.jpg" data-caption="@TODO - photo title" title="Zobrazit větší">
+            <div class="PhotoBox-thumbnailContainer PhotoBox-thumbnailContainer--icon PhotoBox-thumbnailContainer--iconZoom">
+              <img class="PhotoBox-thumbnail" src="./img/placeholder-1.jpg" alt="" loading="lazy"/>
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- Partners -->
+      <section class="Section Section--whiteBig u-mt-56 u-xs-mt-48">
+        <h2 class="H2 H2--gradient">Partneři</h2>
+        <div class="u-overflow-x-auto">
+          <ul class="PartnersGrid u-mt-24">
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+            <li class="PartnerBox">
+              <a href="https://esportsmedia.cz/" target="_blank" rel="noopener noreferrer" title="eSports.cz" aria-label="eSports.cz">
+                <img src="./img/logos/esports.svg" alt="logo eSports.cz" height="130" loading="lazy"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+{% endblock %}
+{% block modals %}
+  <!-- Modal - video interview -->
+  <div class="Modal" id="modal-video-interview" tabindex="-1" role="dialog" aria-label="Video rozhovor">
+    <div class="Modal-dialog">
+      <figure class="YouTubeVideo">
+        <div class="YouTubeVideo-container js-youTubeVideo-container">
+          <!-- Set the YouTube ID on the button with class "js-injectYouTube" as part of value of "data-youtube-src" attribute -->
+        </div>
+      </figure>
+      <button type="button" class="CloseButton js-modal-close" aria-label="Zavřít video rozhovor">
+        <svg class="CloseButton-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

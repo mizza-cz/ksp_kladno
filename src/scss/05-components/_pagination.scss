@@ -1,0 +1,40 @@
+.Pagination {
+  &-list {
+    display: flex;
+    flex-direction: row;
+    // justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-item {
+    display: inline-flex;
+    margin: 0 0.125rem;
+  }
+
+  &-link {
+    @include text($colorSecondary, 1rem, $fontWeightSemiBold, 1);
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 0.25rem 0.5rem;
+    transition: border-color 0.2s ease-in;
+
+    &:not(.is-active):not(.is-disabled):focus,
+    &:not(.is-active):not(.is-disabled):hover,
+    &:not(.is-active):not(.is-disabled):active {
+      color: $colorSecondary;
+      border-color: $colorSecondary;
+      text-decoration: underline;
+    }
+
+    &.is-active {
+      font-weight: $fontWeightBold;
+      border-color: $colorSecondary;
+      pointer-events: none;
+    }
+
+    &.is-disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
