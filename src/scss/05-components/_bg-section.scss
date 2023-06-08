@@ -1,16 +1,4 @@
 .bottom-bg {
-  position: absolute;
-  width: 100%;
-  background-repeat: repeat;
-  background-size: cover;
-  left: 0;
-  margin: 0 auto;
-  background-position: center top;
-  right: 0;
-  bottom: 0;
-  height: 350px;
-  z-index: 0;
-  background-image: url('../img/icons/bg-bottom.svg');
 }
 .h1-story {
   color: $colorSecondary;
@@ -29,6 +17,9 @@
     flex-direction: column;
   }
 }
-.text-secondary{
-   color:$colorSecondary ;
+.text-secondary {
+  color: $colorSecondary;
+}
+.p-relative {
+  position: relative;
 }

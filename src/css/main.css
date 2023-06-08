@@ -366,6 +366,33 @@ body.is-blocked {
 
 .Footer {
   padding-bottom: 3.5rem;
+  position: relative;
+  padding-top: 80px;
+  margin-top: 0px;
+}
+.Footer .Grid {
+  position: relative;
+}
+.Footer h4,
+.Footer .H4,
+.Footer .Link--inverted,
+.Footer .UnstyledList-item {
+  color: #f2f8fc;
+}
+.Footer::before {
+  position: absolute;
+  width: 100%;
+  background-repeat: repeat;
+  background-size: cover;
+  left: 0;
+  margin: 0 auto;
+  background-position: center top;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 0;
+  background-image: url("../img/icons/bg-bottom.svg");
+  content: "";
 }
 @media (max-width: 576px) {
   .Footer {
@@ -379,7 +406,7 @@ body.is-blocked {
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.1em;
-  background: linear-gradient(81.86deg, #467bcb 1.36%, #12b9dd 100%);
+  background: #f2f8fc;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -420,7 +447,7 @@ body.is-blocked {
 }
 .Footer-links li {
   display: inline-flex;
-  color: #0e2f56;
+  color: #f2f8fc;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: inherit;
@@ -2018,21 +2045,6 @@ table tbody td {
     transform: translateY(100%);
   }
 }
-.bottom-bg {
-  position: absolute;
-  width: 100%;
-  background-repeat: repeat;
-  background-size: cover;
-  left: 0;
-  margin: 0 auto;
-  background-position: center top;
-  right: 0;
-  bottom: 0;
-  height: 350px;
-  z-index: 0;
-  background-image: url("../img/icons/bg-bottom.svg");
-}
-
 .h1-story {
   color: #f2f8fc;
   display: flex;
@@ -2057,6 +2069,10 @@ table tbody td {
 
 .text-secondary {
   color: #f2f8fc;
+}
+
+.p-relative {
+  position: relative;
 }
 
 @media (max-width: 1024px) {
