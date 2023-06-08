@@ -802,26 +802,8 @@ body.is-blocked {
 .Section--aboutUs {
   position: relative;
 }
-.Section--aboutUs::after {
-  content: "";
-  display: block;
-  width: 18.25rem;
-  height: 5.125rem;
-  position: absolute;
-  right: -5.5rem;
-  bottom: -1rem;
-  background-color: transparent;
-  background-image: url(../img/waves.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-}
-@media (max-width: 800px) {
-  .Section--aboutUs::after {
-    right: -12.5rem;
-    bottom: -4rem;
-  }
+.Section--aboutUs .Grid {
+  align-items: center;
 }
 
 html {
