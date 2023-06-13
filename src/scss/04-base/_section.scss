@@ -6,8 +6,10 @@
     padding: rem(58px) 2rem;
     overflow: hidden;
 
-    @include respondTo(xs) {
+    @include respondTo(sm) {
       padding: 4rem 1rem;
+      aspect-ratio: 770/420;
+      height: auto !important;
     }
 
     @include respondTo(xxs) {
