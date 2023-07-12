@@ -2155,6 +2155,39 @@ table tbody td {
   width: 50% !important;
 }
 
+.wx-title-container .css-1hxu7j9 {
+  display: none !important;
+}
+
+.css-s9tt3p {
+  display: none !important;
+}
+
+.gallery-widget {
+  width: 100%;
+}
+
+.gallery-widget h2 {
+  display: none;
+}
+
+.gallery-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.gallery-btn span {
+  padding-left: 6px;
+  background: linear-gradient(81.86deg, #467bcb 1.36%, #12b9dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  padding-bottom: 0;
+  margin: 0;
+  padding-top: 3px;
+}
+
 @media (max-width: 1024px) {
   .Nav {
     position: absolute;
