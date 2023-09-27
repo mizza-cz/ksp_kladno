@@ -3434,6 +3434,18 @@ table tbody td {
   object-position: center;
 }
 
+.Section-slider {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 757/600;
+  padding: 0;
+}
+.Section-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .c-primary {
   color: #0e2f56;
 }
