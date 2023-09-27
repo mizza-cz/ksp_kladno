@@ -1354,7 +1354,7 @@ hr {
   align-items: center;
 }
 .Article-date {
-  color: #0e2f56;
+  color: #ffffff;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: inherit;
@@ -1372,7 +1372,7 @@ hr {
   flex-grow: 1;
   align-items: center;
   position: relative;
-  color: #0e2f56;
+  color: #ffffff;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: inherit;
@@ -1395,7 +1395,7 @@ hr {
   margin-right: 0.625rem;
 }
 .Article h1 {
-  color: #0e2f56;
+  color: #ffffff;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
@@ -1519,6 +1519,60 @@ table tbody td {
   text-align: left;
   background-color: #ffffff;
   padding: 0.5rem 1rem;
+}
+
+.article-page::before {
+  display: none;
+}
+
+.Article-header.Article {
+  z-index: 33;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.Article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  border-radius: 1.5rem 0;
+  overflow: hidden;
+}
+.Article-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+.top-decore {
+  position: relative;
+  padding-bottom: 80px;
+  margin-bottom: 40px;
+}
+.top-decore::before {
+  position: absolute;
+  width: 100%;
+  background-repeat: repeat;
+  background-size: cover;
+  left: 0;
+  margin: 0 auto;
+  background-position: center bottom;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 2;
+  z-index: 0;
+  background-image: url(../img/icons/bg-top.svg);
+  min-height: 260px;
+  content: "";
+}
+@media (max-width: 940px) {
+  .top-decore::before {
+    min-height: auto;
+  }
 }
 
 .Button {

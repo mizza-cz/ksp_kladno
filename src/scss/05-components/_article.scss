@@ -44,7 +44,7 @@
   }
 
   &-date {
-    @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+    @include text($colorWhite, $fontSizeSmall, $fontWeightNormal, inherit);
     letter-spacing: 0.32em;
     white-space: nowrap;
     margin-right: 0.5rem;
@@ -59,7 +59,7 @@
     flex-grow: 1;
     align-items: center;
     position: relative;
-    @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+    @include text($colorWhite, $fontSizeSmall, $fontWeightNormal, inherit);
     letter-spacing: 0.73em;
     text-transform: uppercase;
     white-space: nowrap;
@@ -69,7 +69,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       flex-basis: rem(132px);
       display: block;
       height: 1px;
@@ -80,7 +80,7 @@
   }
 
   h1 {
-    @include text($colorHeading, 3rem, $fontWeightBold, 1.2);
+    @include text($colorWhite, 3rem, $fontWeightBold, 1.2);
     letter-spacing: -0.02em;
     margin-top: 1.5rem;
 
@@ -191,4 +191,58 @@ table {
       padding: 0.5rem 1rem;
     }
   }
+}
+
+.article-page {
+  &::before {
+    display: none;
+  }
+}
+.Article-header.Article {
+  z-index: 33;
+  padding-bottom: 0;
+  position: relative;
+}
+.Article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  border-radius: 1.5rem 0;
+  overflow: hidden;
+  img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+  }
+}
+.top-decore {
+  position: relative;
+  padding-bottom: 80px;
+  margin-bottom: 40px;
+  &::before {
+    position: absolute;
+    width: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    left: 0;
+    margin: 0 auto;
+    background-position: center bottom;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: 2;
+    z-index: 0;
+    background-image: url(../img/icons/bg-top.svg);
+    min-height: 260px;
+    content: '';
+    @media (max-width: 940px) {
+      min-height: auto;
+    }
+  }
+}
+
+.gallery-page {
 }
